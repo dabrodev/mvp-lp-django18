@@ -1,2 +1,4 @@
 *.sqlite3
 mvplp18/__pycache__/*
+newsletter/__pycache__/*
+newsletter/migrations/*
