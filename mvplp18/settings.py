@@ -23,11 +23,27 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MY_SECRET_KEY = os.environ["MY_SECRET_KEY"]
 SECRET_KEY = MY_SECRET_KEY
 
+
+#venv activate add: export EM_SECRET_KEY=...
+
+#heroku config:set SOME_SECRET_KEY=...
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = []
 
+EM_SECRET_KEY = os.environ["EM_SECRET_KEY"]
+EM_HOST = os.environ["EM_HOST"]
+
+DEFAULT_FROM_EMAIL='adminx@damiandab.com' # or webmaster@servername
+SERVER_EMAIL='adminx@damiandab.com' # or 'root@servername'
+EMAIL_HOST = 'smtp.elasticemail.com'
+EMAIL_HOST_USER = EM_HOST
+EMAIL_MAIN = 'adminx@damiandab.com'
+EMAIL_HOST_PASSWORD = EM_SECRET_KEY
+EMAIL_PORT = 2525
+EMAIL_USER_TLS = True
 
 # Application definition
 
