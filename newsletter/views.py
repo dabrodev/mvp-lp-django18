@@ -50,12 +50,17 @@ def contact(request):
 			form_message, 
 			form_email,
 			)
+		form_html_message = """
+			<h1>Hello</h1>
+		"""
+		#http://stackoverflow.com/questions/2809547/creating-email-templates-with-django
 
 		send_mail(
 		    subject,
 		    contact_message,
 		    from_email,
 		    to_email,
+		    html_message=form_html_message,
 		    fail_silently=False,
 		)	
 
