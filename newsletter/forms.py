@@ -20,3 +20,8 @@ class EmailSignUpForm(forms.ModelForm):
 		full_name = self.cleaned_data.get('full_name')
 		#write validation code
 		return full_name
+
+class ContactForm(forms.Form):
+	full_name = forms.CharField(required=False)
+	email = forms.EmailField()
+	message = forms.CharField()
