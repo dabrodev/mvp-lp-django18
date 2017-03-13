@@ -16,6 +16,10 @@
     <!-- Container -->
     <div class="container-fluid">
     {% block jumbotron %}  
+    <div class="jumbotron">
+    {% block jumbotron_content%}
+    {% endblock %}
+    </div>
     {% endblock %} 
     {% block content %}  
     {% endblock %}
