@@ -7,23 +7,35 @@
 
 {% block jumbotron_content %}
 <div class="row">
-<div class="col-sm-8">
+<div class="col-sm-6">
 	<h1>Try Django 1.8</h1>
 	<p>The MVP Landing project is designed to get your project started. The goal is to help you launch as soon as possible with the least amount of investment using time or money. Join Us today.</p>
 	<p>
 	  <a class="btn btn-lg btn-primary" href="#" role="button">Join Us&raquo;</a>
 	</p>
 </div>
-<class class="col-sm-4" style="background-color: #000; height: 300px"></class>
+<class class="col-sm-6" style="background-color: #000; height: 300px"></class>
 </div>	
 {% endblock %}
+
 {% block content %}
-<div class="col-sm-6 col-md-3">
-	<h1>Welcome!</h1>
-	<form method="POST" action="">
-		{% csrf_token %}
-		{{ form|crispy }}
-		<input class="btn btn-primary" type="submit" value='Sign Up'/>
-	</form>
+<div class="row">
+	<div class="col-sm-3 pull-right">
+		<p class="lead">Welcome!</p>
+		<form method="POST" action="">
+			{% csrf_token %}
+			{{ form|crispy }}
+			<input class="btn btn-primary" type="submit" value='Sign Up'/>
+		</form>
+	</div>
+	<div class="col-sm-3">
+		<p class="lead">Built with Django &amp; Bootstrap</p>
+	</div>
+		<div class="col-sm-3">
+		<p class="lead">Created for Starters of all kinds.</p>
+	</div>
+		<div class="col-sm-3">
+		<p class="lead">Always Open Source</p>
+	</div>
 </div>
 {% endblock %}
